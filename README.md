@@ -18,4 +18,5 @@ ansible-playbook -i hosts -u root -e "username=$(whoami)" playbook.yml
 ```
 
 ## TO-DO
+- [ ] Automatically recognize key type
 - [ ] Add SWAP memory with parameters for option and storage space quantity.
