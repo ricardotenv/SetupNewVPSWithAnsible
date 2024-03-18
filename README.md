@@ -18,4 +18,4 @@ ansible-playbook -i hosts -u root -e "username=$(whoami)" playbook.yml
 ```
 
 ## TO-DO
-⬜️ Add SWAP memory with parameters for option and storage space quantity.
+- [ ] Add SWAP memory with parameters for option and storage space quantity.
