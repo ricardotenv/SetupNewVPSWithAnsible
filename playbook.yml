@@ -1,0 +1,43 @@
+- name: Setup a new VPS
+  hosts: all
+  become: true
+
+  vars:
+    new_username: "john_doe"
+
+  tasks:
+      - name: Creating passwordless user
+        user:
+          name: "{{ new_username }}"
+          shell: /bin/bash
+          password: ""
+          generate_ssh_key: yes
+
+      - name: Allow sudo without password
+        lineinfile:
+          dest: /etc/sudoers
+          line: "{{ new_username }} ALL=(ALL) NOPASSWD: ALL"
+          validate: "visudo -cf %s"
+        become: true
+        become_user: root
+
+      - name: Enable SSH authentication for the user
+        authorized_key:
+          user: "{{ new_username }}"
+          state: present
+          key: "{{ lookup('file', '~/.ssh/id_ed25519.pub') }}"
+  
+      - name: Disable SSH login as root
+        lineinfile:
+          path: /etc/ssh/sshd_config
+          regex: '^#?PermitRootLogin'
+          line: 'PermitRootLogin no'
+          state: present
+        notify:
+          - restart ssh
+
+  handlers:
+      - name: restart ssh
+        service:
+          name: ssh
+          state: restarted
