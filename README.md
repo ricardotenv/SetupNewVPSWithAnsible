@@ -14,7 +14,7 @@ echo <ip-address> >> hosts
 
 ### How to run
 ```
-ansible-playbook -i hosts -u root -e "username=$(whoami)" playbook.yml
+ansible-playbook -i hosts -u root -e "new_username=$(whoami)" playbook.yml
 ```
 
 ## TO-DO
