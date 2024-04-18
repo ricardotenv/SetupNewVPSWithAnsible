@@ -18,6 +18,7 @@ ansible-playbook -i hosts -u root -e "new_username=$(whoami)" playbook.yml
 ```
 
 ## TO-DO
+- [ ] Add the possibility of disabling root login to be optional
 - [ ] Enable firewall
 - [ ] Automatically recognize key type
 - [ ] Add SWAP memory with parameters for option and storage space quantity.
