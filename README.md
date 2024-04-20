@@ -23,3 +23,4 @@ ansible-playbook -i hosts -u root -e "new_username=$(whoami)" playbook.yml
 - [ ] Automatically recognize key type
 - [ ] Add SWAP memory with parameters for option and storage space quantity.
 - [ ] Open issues from this list
+- [ ] Convert to CLI application
