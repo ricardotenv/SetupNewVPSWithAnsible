@@ -24,3 +24,4 @@ ansible-playbook -i hosts -u root -e "new_username=$(whoami)" playbook.yml
 - [ ] Add SWAP memory with parameters for option and storage space quantity.
 - [ ] Open issues from this list
 - [ ] Convert to CLI application
+- [ ] Optional Docker installation
