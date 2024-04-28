@@ -1,6 +1,8 @@
 # SetupNewVPSWithAnsible
 This Ansible playbook creates a new Linux user and applies minimal security configurations to one or more VPS's.
 
+⚠️ _This playbook was only tested on VPS's running Ubuntu 22 and 24 LTS._
+
 ### How to install
 ```
 git clone https://github.com/ricardotenv/SetupNewVPSWithAnsible.git
@@ -25,3 +27,4 @@ ansible-playbook -i hosts -u root -e "new_username=$(whoami)" playbook.yml
 - [ ] Open issues from this list
 - [ ] Convert to CLI application
 - [ ] Optional Docker installation
+- [ ] Test on CentOS
