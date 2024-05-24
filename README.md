@@ -20,11 +20,11 @@ ansible-playbook -i hosts -u root -e "new_username=$(whoami)" playbook.yml
 ```
 
 ## TO-DO
-- [ ] Add the possibility of disabling root login to be optional
-- [ ] Enable firewall
-- [ ] Automatically recognize key type
-- [ ] Add SWAP memory with parameters for option and storage space quantity.
-- [ ] Open issues from this list
-- [ ] Convert to CLI application
-- [ ] Optional Docker installation
-- [ ] Test on CentOS
+- [ ] [Add the possibility of disabling root login to be optional](https://github.com/ricardotenv/SetupNewVPSWithAnsible/issues/1)
+- [ ] [Enable firewall](https://github.com/ricardotenv/SetupNewVPSWithAnsible/issues/2)
+- [ ] [Automatically recognize key type](https://github.com/ricardotenv/SetupNewVPSWithAnsible/issues/3)
+- [ ] [Add SWAP memory with parameters for option and storage space quantity](https://github.com/ricardotenv/SetupNewVPSWithAnsible/issues/4)
+- [x] Open issues from this list
+- [ ] [Convert to CLI application](https://github.com/ricardotenv/SetupNewVPSWithAnsible/issues/5)
+- [ ] [Optional Docker installation](https://github.com/ricardotenv/SetupNewVPSWithAnsible/issues/6)
+- [ ] [Test on CentOS](https://github.com/ricardotenv/SetupNewVPSWithAnsible/issues/7)
