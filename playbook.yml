@@ -4,6 +4,7 @@
 
   vars:
     new_username: "john_doe"
+    disable_root_login: true # Set to false to keep root login enabled
 
   tasks:
       - name: Creating passwordless user
@@ -33,6 +34,7 @@
           regex: '^#?PermitRootLogin'
           line: 'PermitRootLogin no'
           state: present
+        when: disable_root_login
         notify:
           - restart ssh
 
